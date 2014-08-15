@@ -1,0 +1,274 @@
+/*CSS for vk.loc*/
+@import "/css/reset.css";
+
+body{
+	background-color: #939393;
+
+}
+
+#wrapper{
+	width: 1024px;
+	background-image: url("/img/bg.jpg");
+	background-repeat: repeat;
+	margin: 0 auto;
+	position: relative;
+}
+
+/* Шапка сайта */
+#header{
+	width: 822px;
+	height: 104px;
+	margin-bottom: 43px;
+	position: relative;
+	padding: 26px 116px 0 86px;
+}
+
+#logo{
+	float: left;
+	width: 183px;
+	height: 104px;
+}
+
+#header #top-navi{
+	height: 46px;
+}
+
+#top-navi li a{
+	float: right;
+	margin-left: 20px;
+	margin-top: 30px;
+	color: #919191;
+}
+
+#top-navi li a:hover{
+	color: #75cd00;
+	text-decoration: none;
+}
+
+#header h1{
+	margin-left: 201px;
+	margin-top: 28px;
+	font-size: 28px;
+	color: #75cd00;
+}
+/* Конец шапки сайта */
+
+/* Заголовок формы */
+#form-name{
+	width: 794px;
+	height: 47px;
+	margin: 0 auto 23px auto;
+	position: relative;
+	background-color: #919191;
+}
+
+#form-name h2{
+	text-align: center;
+	font-size: 30px;
+	padding-top: 12px;
+	color: #000000;
+}
+/* Конец заголовка формы */
+
+/* Форма регистрации */	
+#forRegForm{
+	width: 788px;
+	height: 410px;
+	margin: 0 auto 60px auto;
+	background-color: #ffffff;
+	border: 3px solid #919191;
+}
+
+#forImg{
+	width: 192px;
+	height: 410px;
+	float: left;
+}
+
+#forRegForm img{
+	width: 177px;
+	height: 177px;
+	margin-left: 15px;
+	margin-top: 28px;
+}
+	
+#regForm{
+	text-align: right;
+	margin-top: 28px;
+}	
+
+#regForm input{
+	width: 307px;
+	height: 26px;
+}
+
+#regForm .input{
+	margin: 16px 87px 0 0;	
+}
+
+#regForm label{
+	margin-right: 18px;
+}
+	
+#regForm .tips{
+	text-align: center;
+	margin-left: 315px;
+	font-size: 10px;
+	color: #5a5a5a;
+}
+
+#regForm #backButton{
+	width: 119px;
+	height: 27px;
+	margin-top: 80px;
+	margin-right: 13px;
+	background-image: url(/img/backButton.png);
+	background-color: none;
+	border: none;
+	cursor: pointer;
+}
+	
+#regForm #regButton{
+	width: 173px;
+	height: 27px;
+	margin-right: 87px;
+	margin-top: 80px;
+	background-image: url(/img/regButton.png);
+	background-color: none;
+	border: none;
+	cursor: pointer;
+}
+/* Конец формы регистрации */
+
+/* Начало футера */
+#footer{
+	height: 80px;
+	background-color: #000000;
+}
+
+#footer #leftPart{
+	width: 476px;
+	height: 80px;
+	float: left;
+	position: relative;
+}
+
+#leftPart #firstP{
+	font-size: 12px;
+	color: #919191;
+	text-align: right;
+	margin-right: 34px;
+	margin-top: 30px;
+}
+
+#firstP span{
+	color: #ffffff;
+	font-size: 14px;
+}
+
+#footer #rightPart{
+	width: 524px;
+	height: 46px;
+	padding-top: 14px;
+	padding-left: 34px;
+	margin-top: 16px;
+	margin-left: 476px;
+	background-image: url(/img/footerLine.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	vertical-align: center;
+}
+	
+#rightPart #secondP{
+	font-size: 12px;
+	color: #858484;
+}
+/* Конец футера */
+
+/* Начало формы авторизации */
+#headLogin{
+	width: 354px;
+	height: 48px;
+	margin: 124px auto 17px auto;
+	background-color: #919191;
+	position: relative;
+}
+
+#headLogin h2{
+	font-size: 26px;
+	color: #000000;
+	text-align: center;
+	padding-top: 12px;
+}
+
+#login{
+	width: 348px;
+	height: 163px;
+	background-color: #ffffff;
+	border: 3px solid #919191;
+	margin: 0 auto 231px auto;
+}
+
+#leftPartLog{
+	width: 120px;
+	height: 163px;
+	float: left;
+}
+
+#leftPartLog img{
+	margin: 15px 0 8px 20px;
+}
+
+#leftPartLog .logLink{
+	font-size: 12px;
+	margin-left: 12px;
+	text-decoration: none;
+	line-height: 1.9;
+	color: #000000;
+}
+
+#leftPartLog  a:hover{
+	text-decoration: underline;
+}
+
+#rightPartLog{
+	width: 228px;
+	height: 143px;
+	margin-left: 120px;
+}
+
+#rightPartLog form{
+	margin-top: 20px;
+}
+
+#rightPartLog .inputLogin{
+	width: 198px;
+	height: 22px;
+	margin-bottom: 2px;
+}
+
+#rightPartLog #forMargin{
+	margin-bottom: 6px;
+}
+
+#rightPartLog label{
+	font-size: 11px;
+}
+
+#rightPartLog #loginButton{
+	border: none;
+	background-color: none;
+	width: 84px;
+	height: 27px;
+	background-image: url(/img/loginButton.png);
+	cursor: pointer;
+	float: right;
+	margin-top: 19px;
+	margin-right: 24px;
+}
+/* Конец формы авторизации */
+
+	
+	
+	
+	

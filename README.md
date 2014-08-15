@@ -1,0 +1,1 @@
+The first commit for vk.loc
