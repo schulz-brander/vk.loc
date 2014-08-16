@@ -1,3 +1,14 @@
+<?php
+$db = new PDO('mysql:host=localhost; dbname=vk; charset=utf-8','root');
+if (!empty($_POST)){
+	$db->query('insert into users (user_name, e_mail, pass, dob) values ("' . $_POST['userName'] . '", 
+																		 "' . $_POST['e-mail'] . '", 
+																		 "' . $_POST['password'] . '", 
+																		 "' . $_POST['dob'] . '"
+																		 )
+			  ');
+}
+?>
 <!Doctype html>
 <html>
 <head>
@@ -23,7 +34,6 @@
 		
 		<!-- Очистка обтикания <div id="clear"></div>-->
 		
-		
 		<!-- Заголовок формы страницы -->
 		<div id="form-name">
 			<h2>Новый пользователь</h2>
@@ -40,7 +50,7 @@
 				</div>
 				<p class="tips">от 3 до 26 символов</p>	
 				<div class="input">	
-					<label>E-mail адрес *</label><input type="text" name="E-mail" required>
+					<label>E-mail адрес *</label><input type="text" name="e-mail" required>
 				</div>
 				<p class="tips">на данный адрес будет отправлено письмо активации</p>
 				<div class="input">	
@@ -48,8 +58,9 @@
 				</div>
 				<p class="tips">не менее 6 и не более 32 символов</p>
 				<div class="input">	
-					<label>Повдтвердите пароль *</label><input type="password" name="password2" required>
+					<label>Дата рождения *</label><input type="text" name="dob" required>
 				</div>
+				<p class="tips">в формате 31.12.1992</p>
 					<input id="backButton" type="button" onclick="history.back()">
 					<input id="regButton" type="submit" value="">	
 			</form>		
