@@ -4,8 +4,7 @@ if (!empty($_POST)){
 	$db->query('insert into users (user_name, e_mail, pass, dob) values ("' . $_POST['userName'] . '", 
 																		 "' . $_POST['e-mail'] . '", 
 																		 "' . $_POST['password'] . '", 
-																		 "' . $_POST['dob'] . '"
-																		 )
+																		 "' . $_POST['dob'] . '")
 			  ');
 }
 ?>
