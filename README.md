@@ -1,1 +1,1 @@
-The first commit for vk.loc
+Вадим Шуляк - группа №1
