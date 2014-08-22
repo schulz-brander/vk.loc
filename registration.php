@@ -1,13 +1,5 @@
-<?php
-$db = new PDO('mysql:host=localhost; dbname=vk; charset=utf-8','root');
-if (!empty($_POST)){
-	$db->query('insert into users (user_name, e_mail, pass, dob) values ("' . $_POST['userName'] . '", 
-																		 "' . $_POST['e-mail'] . '", 
-																		 "' . $_POST['password'] . '", 
-																		 "' . $_POST['dob'] . '")
-			  ');
-}
-?>
+<?php require_once 'inc/dbConfig.php' ?>
+<?php require_once 'inc/lib.php' ?>
 <!Doctype html>
 <html>
 <head>
@@ -49,7 +41,7 @@ if (!empty($_POST)){
 				</div>
 				<p class="tips">от 3 до 26 символов</p>	
 				<div class="input">	
-					<label>E-mail адрес *</label><input type="text" name="e-mail" required>
+					<label>E-mail адрес *</label><input type="text" name="eMail" required>
 				</div>
 				<p class="tips">на данный адрес будет отправлено письмо активации</p>
 				<div class="input">	
