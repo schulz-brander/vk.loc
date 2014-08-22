@@ -5,7 +5,14 @@ class Users {
 	public $password;
 	public $dob;
 	
-	function addUser(){
+	function __construct($userNameConstr, $eMailConstr, $passwordConstr, $dobConstr){
+		$this->userName = trim(htmlspecialchars($userNameConstr));
+		$this->eMail = trim(htmlspecialchars($eMailConstr));
+		$this->password = trim(htmlspecialchars($passwordConstr));
+		$this->dob = trim(htmlspecialchars($dobConstr));
+		$this->addUser();
+	}
+		function addUser(){
 		$db = new PDO('mysql:host='.DB_HOST.'; dbname='.DB_NAME.'; charset='.DB_CHARSET.'',''.DB_USER.'','');
 		$db->query('insert into users (user_name, e_mail, pass, dob) 
 								values ("' . $this->userName . '", 
@@ -14,14 +21,6 @@ class Users {
 										"' . $this->dob . '")
 					');
 	}
-}
-	if($_POST){
-		$userReg = new Users();
-		$userReg->userName = trim(htmlspecialchars($_POST['userName'])); 
-		$userReg->eMail = trim(htmlspecialchars($_POST['eMail'])); 
-		$userReg->password = trim(htmlspecialchars($_POST['password'])); 
-		$userReg->dob = htmlspecialchars($_POST['dob']);
-		$userReg->addUser();
 }
 
 function clearTable($tableName){

@@ -1,5 +1,10 @@
 <?php require_once 'inc/dbConfig.php' ?>
 <?php require_once 'inc/lib.php' ?>
+<?php
+if(!empty($_POST)){
+	$userReg = new Users($_POST['userName'], $_POST['eMail'], $_POST['password'], $_POST['dob']);
+}
+?>
 <!Doctype html>
 <html>
 <head>
