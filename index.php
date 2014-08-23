@@ -9,17 +9,7 @@
 	<div id="wrapper">
 		
 		<!-- Шапка страницы -->
-		<div id="header">
-			<a href="http://vk.loc/index.php"><img id="logo" src="/img/logo.png" /></a>
-			<div id="top-navi">
-				<ul>
-					<li><a href="#">Ссылка 2</a></li>					
-					<li><a href="#">Ссылка 1</a></li>
-					<li><a href="http://vk.loc/index.php">Главная</a></li>
-				<ul>
-			</div>
-			<h1>Добро пожаловать!</h1>
-		</div>
+		<?php require 'template/header.php' ?>
 		
 		<!-- Форма авторизации -->
 		<div id="headLogin">
@@ -28,7 +18,7 @@
 		<div id="login">
 			<div id="leftPartLog">
 				<img src="/img/forLogin.png">
-				<a class="logLink" href="http://vk.loc/registration.php">Регистрация</a>
+				<a class="logLink" href="/template/registration.php">Регистрация</a>
 				<a class="logLink" href="#">Забыли пароль?</a>
 			</div>
 			<div id="rightPartLog">
@@ -45,14 +35,8 @@
 		
 		
 		<!-- Футер -->
-		<div id="footer">
-			<div id="leftPart">
-				<p id="firstP">Сделано своими руками для <span>vk.loc</span></p>
-			</div>
-			<div id="rightPart">
-				<p id="secondP">© 2014 vk.loc. Все права типа как защищены.</p>
-			</div>
-		</div>
+		<?php require 'template/footer.php' ?>
+		
 	</div>
 </body>
 </html>
