@@ -1,8 +1,9 @@
-<?php require_once '../classes/Users.php' ?>
+<?php require_once '../classes/User.php' ?>
 <?php
 if(!empty($_POST)) {
-	$user = new Users();
+	$user = new User();
 	$user->addUser($_POST);
+	$user->getUserId($_POST);
 	$result = $user->result;
 }
 ?>
