@@ -1,15 +1,16 @@
 <?php require_once '/classes/User.php' ?>
 <?php
 session_start();
-
 $authUser = new User();
 $authUser->auth($_POST);//метод авторизации с параметром пост
 $data = $authUser->showData;//через него получаем данные с базы - мыло, пароль и др.
 //$result = $authUser->authResult;//'Здравствуйте имя пользователя, Ваш ID id пользователя' не задействована!!!
-
 if(!empty($_POST) && $_POST['eMail'] == $data['e_mail'] && $_POST['password'] ==  $data['pass']){
 	$_SESSION['id'] =  $data['id'];
 	$_SESSION['userName'] =  $data['user_name'];
+}
+if(!empty($_POST) && $_POST['eMail'] != $data['e_mail']){
+	$incorrect = true;
 }
 ?>
 <!Doctype html>
@@ -26,9 +27,11 @@ if(!empty($_POST) && $_POST['eMail'] == $data['e_mail'] && $_POST['password'] ==
 		<?php require 'template/header.php' ?>
 		
 		<!-- Форма авторизации -->
-		<?php if(empty($_SESSION['userName'])): ?>
+		<?php if(!isset($_SESSION['userName'])): ?>
 			<div id="headLogin">
-				<h2>Авторизация<h2>
+				<h2><?php if($incorrect): echo "Ошибка при входе!" ;?>
+					<?php else: echo "Авторизация"; endif; ?>
+				</h2>
 			</div>	
 			<div id="login">
 				<div id="leftPartLog">
